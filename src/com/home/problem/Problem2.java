@@ -15,12 +15,29 @@ package com.home.problem;
  * 
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
  * 
- * 
+ * Answer: 4613732
  * 
  */
 public class Problem2
 {
-    
+    public static void main(String[] args)
+    {
+        long a=1;
+        long b = 2;
+        long sum = 2;
+        while(true)
+        {
+            long temp = b;
+            b += a;
+            a = temp;
+            if (b > 4000000)
+                break;
+            if (b % 2 == 0)
+                sum += b;
+        }
+
+        System.out.println("Sum is : =" + sum);
+    }
 }
 
 
