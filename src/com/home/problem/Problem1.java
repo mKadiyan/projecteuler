@@ -7,6 +7,8 @@
 
 package com.home.problem;
 
+import java.math.BigInteger;
+
 /**
  * 
  * If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -23,11 +25,21 @@ public class Problem1
         /*
          * use formula number*n*(n-1)/2
          */
-        int N = 999;
-        int threeNumbers = 3 * (N / 3) * (N / 3 + 1) / 2;
-        int fiveNumbers = 5 * (N / 5) * (N / 5 + 1) / 2;
-        int fifteenNumbers = 15 * (N / 15) * (N / 15 + 1) / 2;
-        System.out.println("Sum is : " + (threeNumbers + fiveNumbers - fifteenNumbers));
+        // int N = 999;
+        // int threeNumbers = 3 * (N / 3) * (N / 3 + 1) / 2;
+        // int fiveNumbers = 5 * (N / 5) * (N / 5 + 1) / 2;
+        // int fifteenNumbers = 15 * (N / 15) * (N / 15 + 1) / 2;
+        // System.out.println("Sum is : " + (threeNumbers + fiveNumbers - fifteenNumbers));
+        
+        int integ = 25;
+        BigInteger result = new BigInteger("1");
+        while (integ > 0)
+        {
+            result = result.multiply(new BigInteger(integ + ""));
+            integ--;
+        }
+        System.out.println(result);
+
     }
 }
 
